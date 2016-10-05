@@ -17,6 +17,7 @@ namespace iPillDesign
         private DateTime TimerStart { get; set; }
         private string CurrentPage { get; set; }
         String stunde;
+        //Url bitte nicht andauernd aufrufen, Flutet mein Telefon
         Uri note = new Uri("http://www.baitmain.de/ipill");
 
         public MainPage()
@@ -37,7 +38,7 @@ namespace iPillDesign
 
         private async void readText(String text)
         {
-            //BEnachrichtigung "sprechen"
+            //Benachrichtigung "sprechen"
             MediaElement player = new MediaElement();
             SpeechSynthesizer synthesizer = new SpeechSynthesizer();
             synthesizer.Voice = SpeechSynthesizer.AllVoices
@@ -190,6 +191,7 @@ namespace iPillDesign
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            //Testknopf 4
             web.Navigate(note);
             einnahme.Foreground = new SolidColorBrush(Colors.Green);
             ausgabe.IsEnabled = false;
@@ -199,7 +201,7 @@ namespace iPillDesign
 
         private void web_LoadCompleted(object sender, Windows.UI.Xaml.Navigation.NavigationEventArgs e)
         {
-
+            //Notwendig, aber ungenutzt
         }
     }
 }
