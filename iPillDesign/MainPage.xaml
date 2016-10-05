@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="iPillDesign.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iPillDesign"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="800" Height="480">
+
+    <Grid HorizontalAlignment="Left" Width="800">
+        <Grid.Background>
+            <SolidColorBrush Color="{ThemeResource SystemBaseMediumHighColor}"/>
+        </Grid.Background>
+        <WebView x:Name="web" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="2" LoadCompleted="web_LoadCompleted" Margin="-2,-3,0,0" RenderTransformOrigin="0.5,0.5">
+            <WebView.RenderTransform>
+                <CompositeTransform ScaleY="-1" ScaleX="-1"/>
+            </WebView.RenderTransform>
+        </WebView>
+        <TextBlock x:Name="time" HorizontalAlignment="Right" Margin="0,10,18,0" TextWrapping="Wrap" Text="12:00" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI" FontWeight="Light" FontSize="22"/>
+        <TextBlock x:Name="einnahme" Margin="139,135,128,291" TextWrapping="Wrap" Text="Nächste Einnahme: 13 Uhr" FontSize="48" FontFamily="Segoe UI" FontWeight="Light" Foreground="Green">
+            <TextBlock.Resources>
+                <Color x:Key="green">#FF55CC29</Color>
+            </TextBlock.Resources>
+        </TextBlock>
+        <Button x:Name="ausgabe" Content="Tabletten ausgeben" HorizontalAlignment="Left" Margin="139,259,0,127" VerticalAlignment="Stretch" Width="533" Foreground="White" FontSize="36" FontFamily="Segoe UI" FontWeight="Light" Click="ausgabe_Click" Background="#FF0078D7"/>
+        <Button x:Name="button" Content="Status 4" HorizontalAlignment="Left" Height="31" Margin="661,439,0,0" VerticalAlignment="Top" Width="121" Click="button_Click"/>
+        <Button x:Name="button1" Content="Status 3" HorizontalAlignment="Left" Height="31" Margin="542,439,0,0" VerticalAlignment="Top" Width="114" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Status 2" HorizontalAlignment="Left" Height="31" Margin="438,439,0,0" VerticalAlignment="Top" Width="99" Click="button2_Click"/>
+        <Button x:Name="button3" Content="Status 1" HorizontalAlignment="Left" Margin="319,439,0,0" VerticalAlignment="Top" Width="114" Click="button3_Click"/>
+    </Grid>
+</Page>
